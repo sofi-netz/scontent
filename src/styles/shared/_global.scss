@@ -1,0 +1,15 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none !important;
+}
+
+body {
+  line-height: 2rem;
+
+  /* For mobile taps, remove blue tap */
+  -webkit-tap-highlight-color: transparent;
+}
