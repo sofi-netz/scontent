@@ -1,0 +1,20 @@
+version: '3.5'
+
+services:
+  angular:
+    build: .
+    command: start
+    ports:
+      - "4200:4200"
+    volumes:
+      - .:/app:delegated
+    networks:
+      selfconsult:
+        aliases:
+          - scontent
+
+networks:
+  selfconsult:
+    ipam:
+      config:
+        - subnet: 10.198.0.0/16

@@ -1,6 +1,7 @@
 FROM node:14.17.0-alpine
 
-RUN mkdir /app && \
+RUN apk --no-cache add shadow rsync && \
+  mkdir /app && \
   chown node:node /app
 
 WORKDIR /app
@@ -9,11 +10,11 @@ USER node
 
 COPY package.json package-lock.json /app/
 
-RUN npm install
+RUN npm install --loglevel=error
 
-COPY . .
-
-ENTRYPOINT ["npm"]
+COPY .  /app/
 
 # Angular's default port
 EXPOSE 4200
+
+ENTRYPOINT ["npm"]
