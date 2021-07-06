@@ -43,6 +43,12 @@
           },
           "configurations": {
             "production": {
+              "buildOptimizer": true,
+              "optimization": true,
+              "vendorChunk": false,
+              "extractLicenses": true,
+              "sourceMap": false,
+              "namedChunks": false,
               "budgets": [
                 {
                   "type": "initial",
@@ -111,9 +117,21 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+         }
         }
       }
     }
   },
-  "defaultProject": "scontent"
+  "defaultProject": "scontent",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }

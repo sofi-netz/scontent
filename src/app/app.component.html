@@ -6,7 +6,6 @@
   </mat-toolbar>
 
   <mat-sidenav-container class="flex flex-row flex-grow">
-
     <!-- EACH APP HAS ITS OWN LINKS AND NAVIGATION -->
     <mat-sidenav #snav mode="side">
       <mat-nav-list>
@@ -18,51 +17,49 @@
 
     <mat-sidenav-content>
       <div class="h-screen flex flex-row">
+        <!-- SIDENAV TOGGLE ICON   -->
+        <div class="self-center flex-none h-10 w-10">
+          <button mat-icon-button (click)="snav.toggle()" class="hover:bg-pink-500">
+            <mat-icon>sync_alt</mat-icon>
+          </button>
+        </div>
 
-      <!-- SIDENAV TOGGLE ICON   -->
-      <div class="self-center flex-none h-10 w-10">
-        <button mat-icon-button (click)="snav.toggle()" class="hover:bg-pink-500">
-          <mat-icon>sync_alt</mat-icon>
-        </button>
-      </div>
-
-      <!--  MAIN CONTENT    -->
-      <div class="flex-grow">
-
-        <p>Test 1 Lorem ipsum la blasd f</p>
-        <p>Test 2 Lorem ipsum la blasd f</p>
-        <p>Test 3 Lorem ipsum la blasd f</p>
-        <p>Test 3 Lorem ipsum la blasd f</p>
-        <p>Test 3 Lorem ipsum la blasd f</p>
-        <p>Test 3 Lorem ipsum la blasd f</p>
-        <p>Test 3 Lorem ipsum la blasd f</p>
-        <p>Test 3 Lorem ipsum la blasd f</p>
-        <p>Test 3 Lorem ipsum la blasd f</p>
-        <p>Test 3 Lorem ipsum la blasd f</p>
-        <p>Test 3 Lorem ipsum la blasd f</p>
-        <p>Test 3 Lorem ipsum la blasd f</p>
-        <p>Test 3 Lorem ipsum la blasd f</p>
-        <p>Test 3 Lorem ipsum la blasd f</p>
-        <p>Test 3 Lorem ipsum la blasd f</p>
-        <p>Test 3 Lorem ipsum la blasd f</p>
-        <p>Test 3 Lorem ipsum la blasd f</p>
-        <p>Test 3 Lorem ipsum la blasd f</p>
-        <p>Test 3 Lorem ipsum la blasd f</p>
-        <p>Test 3 Lorem ipsum la blasd f</p>
-        <p>Test 3 Lorem ipsum la blasd f</p>
-        <p>Test 3 Lorem ipsum la blasd f</p>
-        <p>Test 3 Lorem ipsum la blasd f</p>
-        <p>Test 3 Lorem ipsum la blasd f</p>
-        <p>Test 3 Lorem ipsum la blasd f</p>
-        <p>Test 3 Lorem ipsum la blasd f</p>
-        <p>Test 3 Lorem ipsum la blasd f</p>
-        <p>Test 3 Lorem ipsum la blasd f</p>
-        <p>Test 3 Lorem ipsum la blasd f</p>
-        <p>Test 3 Lorem ipsum la blasd f</p>
-        <p>Test 3 Lorem ipsum la blasd f</p>
-        <p>Test 3 Lorem ipsum la blasd f</p>
-        <p>Test 3 Lorem ipsum la blasd f</p>
-      </div>
+        <!--  MAIN CONTENT    -->
+        <div class="flex-grow">
+          <p>Test 1 Lorem ipsum la blasd f</p>
+          <p>Test 2 Lorem ipsum la blasd f</p>
+          <p>Test 3 Lorem ipsum la blasd f</p>
+          <p>Test 3 Lorem ipsum la blasd f</p>
+          <p>Test 3 Lorem ipsum la blasd f</p>
+          <p>Test 3 Lorem ipsum la blasd f</p>
+          <p>Test 3 Lorem ipsum la blasd f</p>
+          <p>Test 3 Lorem ipsum la blasd f</p>
+          <p>Test 3 Lorem ipsum la blasd f</p>
+          <p>Test 3 Lorem ipsum la blasd f</p>
+          <p>Test 3 Lorem ipsum la blasd f</p>
+          <p>Test 3 Lorem ipsum la blasd f</p>
+          <p>Test 3 Lorem ipsum la blasd f</p>
+          <p>Test 3 Lorem ipsum la blasd f</p>
+          <p>Test 3 Lorem ipsum la blasd f</p>
+          <p>Test 3 Lorem ipsum la blasd f</p>
+          <p>Test 3 Lorem ipsum la blasd f</p>
+          <p>Test 3 Lorem ipsum la blasd f</p>
+          <p>Test 3 Lorem ipsum la blasd f</p>
+          <p>Test 3 Lorem ipsum la blasd f</p>
+          <p>Test 3 Lorem ipsum la blasd f</p>
+          <p>Test 3 Lorem ipsum la blasd f</p>
+          <p>Test 3 Lorem ipsum la blasd f</p>
+          <p>Test 3 Lorem ipsum la blasd f</p>
+          <p>Test 3 Lorem ipsum la blasd f</p>
+          <p>Test 3 Lorem ipsum la blasd f</p>
+          <p>Test 3 Lorem ipsum la blasd f</p>
+          <p>Test 3 Lorem ipsum la blasd f</p>
+          <p>Test 3 Lorem ipsum la blasd f</p>
+          <p>Test 3 Lorem ipsum la blasd f</p>
+          <p>Test 3 Lorem ipsum la blasd f</p>
+          <p>Test 3 Lorem ipsum la blasd f</p>
+          <p>Test 3 Lorem ipsum la blasd f</p>
+        </div>
       </div>
     </mat-sidenav-content>
   </mat-sidenav-container>
