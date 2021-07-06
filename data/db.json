@@ -1,0 +1,154 @@
+{
+  "answers": [
+    {
+      "id": 1,
+      "notAvailable": "There are currently no guidelines or procedural instructions to ensure this in a structured and consistent manner.",
+      "initial": "At present, only the beginnings of a structured approach exist.",
+      "defined": "Appropriate guidelines or procedural instructions have been selected or defined and communicated in order to implement this in a structured manner, but have not yet been implemented or have only been partially implemented.",
+      "established": "Guidelines or procedural instructions have been established for this purpose in order to ensure consistent implementation in a structured manner.",
+      "qualityChecked": "Guidelines or procedural instructions have been established and implemented in a structured manner. They are implemented across all areas and regularly checked for completeness and up-to-dateness in order to further optimise them.",
+      "optimized": "The implementation of the guidelines or procedural instructions is (almost) in an ideal state after multiple improvements. Regular checks for completeness and up-to-dateness permanently ensure the continuous implementation at this high level."
+    },
+    {
+      "id": 2,
+      "notAvailable": "No service is offered for this purpose and there is no defined procedure or established process.",
+      "initial": "No structured central service is offered in this area. The procedure or process is not uniformly defined and is only implemented initially by individuals.",
+      "defined": "A corresponding service with a defined procedure or corresponding processes has been defined and communicated, but not yet or only partially implemented and offered.",
+      "established": "This service is implemented, offered and ensured via a defined procedure or established processes for almost the entire target group.",
+      "qualityChecked": "This service is offered professionally and continuously for the entire target group with sufficient resources to ensure high customer satisfaction. The defined approach or established processes are regularly reviewed and optimized for improvement opportunities.",
+      "optimized": "After several improvements and with the sufficient resources available, this service is almost in an ideal state. The direct and continuous availability of this service for the target group is ensured and is regularly requested from them."
+    },
+    {
+      "id": 3,
+      "notAvailable": "There is no defined procedure or established process in this area.",
+      "initial": "The procedure or process is not uniformly defined and is only initially implemented by individuals.",
+      "defined": "The procedure or a corresponding process has been defined and communicated, but not yet or only partially implemented.",
+      "established": "The requirement is implemented via a defined procedure or an established process in all relevant areas.",
+      "qualityChecked": "The defined procedure or the established process is regularly checked for improvement possibilities and adapted.",
+      "optimized": "The defined procedure or the established process is almost in an ideal state after several improvements and adjustments"
+    },
+    {
+      "id": 4,
+      "notAvailable": "There are currently no definitions or documentation on this.",
+      "initial": "Currently, only unstructured or incomplete definitions or documentation exist.",
+      "defined": "An approach to documentation or definition has been agreed but not yet consistently implemented.",
+      "established": "Structured documentation or definitions of this requirement are available.",
+      "qualityChecked": "The available documentation or definitions are actively used, regularly reviewed and updated.",
+      "optimized": "The existing documentation and definitions are actively and continuously improved in order to represent the current status almost without errors and without gaps."
+    }
+  ],
+  "requirements": [
+    {
+      "id": 1,
+      "topicId": 1,
+      "order": 3,
+      "answerId": 1,
+      "title": "Management review",
+      "description": "The management review is carried out and documented by top management at planned intervals, taking into account the input parameters required by the standard.",
+      "status": { "slug": "validated", "display": "Validated" },
+      "topic": {"id": 1, "title": "GDPR"}
+    },
+    {
+      "id": 2,
+      "topicId": 1,
+      "order": 1,
+      "title": "Survey",
+      "description": "User or customer satisfaction is regularly (e.g. annually) checked by means of a survey of the target group and the results are communicated to those involved for the purpose of optimisation.",
+      "status": { "slug": "inProgress", "display": "Work in progress" },
+      "topic": {"id": 1, "title": "GDPR"}
+    },
+    {
+      "id": 3,
+      "topicId": 1,
+      "order": 2,
+      "answerId": 2,
+      "title": "Internal audit procedures",
+      "description": "A procedure for planning and conducting internal audits is available as documented information.",
+      "status": { "slug": "inValidation", "display": "Waiting for validation" },
+      "topic": {"id": 1, "title": "GDPR"}
+    },
+    {
+      "id": 4,
+      "topicId": 3,
+      "title": "Innovation Panel",
+      "description": "A heterogeneous committee regularly defines and validates current and future business requirements and decides on the implementation of elaborated innovation proposals and projects.",
+      "status": { "slug": "inProgress", "display": "Work in progress" },
+      "answerId": 3,
+      "topic": {"id": 3, "title": "Process Management"}
+    },
+    {
+      "id": 5,
+      "topicId": 3,
+      "title": "Innovation Panel",
+      "description": "",
+      "status": { "slug": "inProgress", "display": "Work in progress" },
+      "answerId": 3,
+      "topic": {"id": 3, "title": "Process Management"}
+    }
+  ],
+  "topics": [
+    {
+      "id": 1,
+      "title": "GDPR",
+      "description": "Ensure GDPR compliance within the company.",
+      "status": {
+        "slug": "validated",
+        "display": "Validated. Ready to be assigned to customers"
+      },
+      "requirementIds": [1, 2, 3],
+      "requirements": [
+        {
+          "id": 1,
+          "topicId": 1,
+          "title": "Management review",
+          "description": "The management review is carried out and documented by top management at planned intervals, taking into account the input parameters required by the standard.",
+          "status": { "slug": "validated", "display": "Validated" },
+          "answerId": 1
+        },
+        {
+          "id": 2,
+          "topicId": 1,
+          "title": "Survey",
+          "description": "User or customer satisfaction is regularly (e.g. annually) checked by means of a survey of the target group and the results are communicated to those involved for the purpose of optimisation.",
+          "status": { "slug": "inProgress", "display": "Work in progress" }
+        },
+        {
+          "id": 3,
+          "topicId": 1,
+          "order": 2,
+          "answerId": 2,
+          "title": "Internal audit procedures",
+          "description": "A procedure for planning and conducting internal audits is available as documented information.",
+          "status": {
+            "slug": "inValidation",
+            "display": "Waiting for validation"
+          }
+        }
+      ]
+    },
+
+    {
+      "id": 2,
+      "status": { "slug": "new", "display": "New. Nobody working on it" },
+      "title": "Data protection management",
+      "description": "Systematic implementation of the legal and operational requirements of data protection based on the GDPR (planning, organisation, management, control)."
+    },
+    {
+      "id": 3,
+      "status": { "slug": "inProgress", "display": "Work in progress" },
+      "title": "Process Management",
+      "description": "Optimal alignment of business processes with the corporate strategy in order to sustainably increase their effectiveness and efficiency.",
+      "requirementIds": [4, 5],
+      "requirements": [
+        {
+          "id": 4,
+          "topicId": 3,
+          "title": "Innovation Panel",
+          "description": "A heterogeneous committee regularly defines and validates current and future business requirements and decides on the implementation of elaborated innovation proposals and projects.",
+          "status": { "slug": "inProgress", "display": "Work in progress" },
+          "answerId": 3
+        }
+      ]
+    }
+  ]
+}

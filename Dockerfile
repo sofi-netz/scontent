@@ -16,5 +16,7 @@ COPY .  /app/
 
 # Angular's default port
 EXPOSE 4200
+# Dummy server port
+EXPOSE 3003
 
 ENTRYPOINT ["npm"]

@@ -11,7 +11,19 @@ services:
     networks:
       selfconsult:
         aliases:
-          - scontent
+          - scontent-ui
+    depends_on:
+      - dummy-server
+
+  dummy-server:
+    build: .
+    command: run-script dummy-server
+    ports:
+      - "3003:3003"
+    networks:
+      selfconsult:
+        aliases:
+          - scontent-server
 
 networks:
   selfconsult:
