@@ -1,0 +1,36 @@
+<mat-sidenav-container class="h-full w-full bg-green-500">
+  <mat-sidenav mode="side" opened class="flex flex-col">
+    <!-- TODO FIX when navigating directly to view/:id set selected item-->
+    <!-- TODO FIX in case if nativation was reset to '' and mat-selection-list than reset selection-->
+
+    <!-- TODO decide between strategies. mat-selection-list vs mat-nav-list -->
+    <!--    <mat-selection-list #topicsOptions [multiple]="false">-->
+    <!--      <mat-list-option *ngFor="let topic of topics"-->
+    <!--                       [value]="topic"-->
+    <!--                       routerLink="view/{{topic.id}}"-->
+    <!--                       routerLinkActive="active"-->
+    <!--      >-->
+    <!--        {{topic.title}}-->
+    <!--      </mat-list-option>-->
+    <!--    </mat-selection-list>-->
+    <!--    -->
+    <mat-nav-list>
+      <mat-list-item
+        *ngFor="let topic of topics"
+        mat-list-item
+        routerLink="view/{{ topic.id }}"
+        routerLinkActive="active"
+        >{{ topic.title }}</mat-list-item
+      >
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <button routerLink="add" i18n>Add topic</button>
+    <!--    <button *ngIf="topicsOptions.selectedOptions.selected[0]"-->
+    <!--            routerLink="edit/{{topicsOptions.selectedOptions.selected[0].value}}"-->
+    <!--            i18n-->
+    <!--    >Edit topic</button>-->
+
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

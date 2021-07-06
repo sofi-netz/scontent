@@ -1,9 +1,8 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core'
-import { CommonModule } from '@angular/common'
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http'
-import { AppMaterialModule } from './app-material.module'
 import { EnsureModuleLoadedOnceGuard } from './ensure-module-loaded-once.guard'
 import { BaseUrlService } from './interceptors/base-url.service'
+import { DataService } from './services/data.service'
 
 // This module should me loaded only once.
 // It exports and declares "singleton" like entities: used or created only once
@@ -11,9 +10,10 @@ import { BaseUrlService } from './interceptors/base-url.service'
 
 @NgModule({
   declarations: [],
-  imports: [CommonModule, AppMaterialModule, HttpClientModule],
-  exports: [AppMaterialModule, HttpClientModule],
+  imports: [HttpClientModule],
+  exports: [HttpClientModule],
   providers: [
+    DataService,
     { provide: HTTP_INTERCEPTORS, useClass: BaseUrlService, multi: true },
     { provide: 'Window', useFactory: () => window },
   ], // these should be singleton

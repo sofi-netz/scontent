@@ -1,0 +1,6 @@
+<ng-container *ngIf="topic">
+  <h1>{{ topic.title }}</h1>
+  <h2>{{ topic.description }}</h2>
+</ng-container>
+
+<mat-spinner *ngIf="!topic"></mat-spinner>
