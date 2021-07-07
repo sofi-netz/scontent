@@ -1,9 +1,9 @@
 import { Component, OnDestroy, OnInit } from '@angular/core'
-import { map, take, takeUntil } from 'rxjs/operators'
+import { ActivatedRoute, Router } from '@angular/router'
+import { take } from 'rxjs/operators'
 import { Topic } from '../shared/types'
 import { DataService } from '../core/services/data.service'
 import { Subject } from 'rxjs'
-import { ActivatedRoute } from '@angular/router'
 
 @Component({
   selector: 'app-topics',
@@ -11,25 +11,17 @@ import { ActivatedRoute } from '@angular/router'
   styleUrls: ['./topics.component.scss'],
 })
 export class TopicsComponent implements OnInit, OnDestroy {
-  topics?: Topic[]
 
+  topics?: Topic[]
   private _destroyed$ = new Subject()
 
-  // @ViewChild('')
-  constructor(private data: DataService, private route: ActivatedRoute) {}
+  constructor(
+    private data: DataService,
+              private router: Router,
+    private route: ActivatedRoute,
+  ) {}
 
   ngOnInit() {
-    this.route.params
-      .pipe(
-        takeUntil(this._destroyed$),
-        map((params) => {
-          console.log('IN MAP ')
-          if (params.id) {
-            console.log('I HAVE ID ' + params.id)
-          }
-        })
-      )
-      .subscribe()
     this.data
       .listTopics()
       .pipe(take(1))
@@ -40,4 +32,8 @@ export class TopicsComponent implements OnInit, OnDestroy {
     this._destroyed$.next()
     this._destroyed$.unsubscribe()
   }
+
 }
+
+// TODO FIX: navbar on mobile should not slide but overlay
+// TODO FIX extra horizontal scroll?

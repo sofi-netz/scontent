@@ -1,17 +1,16 @@
 <!-- Main app contains -->
-<div class="h-screen w-screen flex flex-col bg-red-500">
-  <!-- TODO In header add some navigation links -->
-  <header class="flex-none bg-pink-200">
-    <mat-toolbar class="h-10">
+<div class="h-screen w-screen flex flex-col">
+  <header class="flex-none">
+    <mat-toolbar class="h-10 bg-primary text-light">
       <a routerLink=".">Topics</a>
     </mat-toolbar>
   </header>
 
   <!-- Content which fits to the screen -->
-  <div class="flex-grow bg-blue-500">
+  <div class="flex-grow">
     <router-outlet></router-outlet>
   </div>
 
-  <!-- In footer add some privacy, helper links etc-->
-  <footer class="flex-none order-last bg-pink-500">Footer placeholder</footer>
+  <!-- TODO In footer add some privacy, helper links etc-->
+  <footer class="flex-none order-last bg-primary">Footer placeholder</footer>
 </div>

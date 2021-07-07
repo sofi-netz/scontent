@@ -35,6 +35,13 @@ export type AnswerSet = {
 }
 
 export type Status = {
-  slug: string
+  slug: Statuses
   display: string
 }
+
+export enum Statuses {
+  VALIDATED = 'validated',
+  IN_PROGRESS = 'inProgress',
+  IN_VALIDATION = 'inValidation'
+}
+

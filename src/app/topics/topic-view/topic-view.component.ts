@@ -30,5 +30,4 @@ export class TopicViewComponent implements OnInit, OnDestroy {
     this._destroyed$.next()
     this._destroyed$.unsubscribe()
   }
-  // TODO FIX
 }

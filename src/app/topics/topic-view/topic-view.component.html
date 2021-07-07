@@ -1,6 +1,37 @@
 <ng-container *ngIf="topic">
+    <!-- Action buttons in the top bar buttons -->
+    <div class="flex justify-start space-x-4 pb-6 pl-6">
+      <button
+              mat-raised-button
+              class="bg-neutral"
+              routerLink="{{topic.id}}/edit"
+              i18n
+      >Edit topic
+      </button>
+      <button
+              mat-raised-button
+              class="bg-neutral"
+              routerLink="requirement/new"
+              i18n
+      >Add new requirement to topic
+      </button>
+
+      <div class="flex-grow"></div>
+      <button
+        mat-raised-button
+        routerLink="add"
+        class="bg-accent"
+        i18n>Add new topic</button>
+    </div>
+
+
   <h1>{{ topic.title }}</h1>
-  <h2>{{ topic.description }}</h2>
+  <h3>{{ topic.description }}</h3>
+
+  <h4 i18n>Requirements and their statuses</h4>
+  <div class="gap-4 flex flex-wrap">
+    <app-requirement-card class="flex-grow-1 max-w-xl" *ngFor="let req of topic.requirements" [requirement]="req"></app-requirement-card>
+  </div>
 </ng-container>
 
 <mat-spinner *ngIf="!topic"></mat-spinner>

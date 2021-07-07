@@ -1,0 +1,18 @@
+// Are used in tailwind theme colors and in css
+:root {
+  //used in text
+  --color-light: #e7e5e4;
+  --color-dark: #a8a29e;
+
+  // used in components background
+  --color-primary: #3a4d6c;
+  --color-secondary: #FAFAFA;
+  --color-accent: #8BC34A;
+  --color-neutral: #a8a29e;
+
+  // used in alerts , notifications and statuses
+  --color-success: #047857;
+  --color-info: #7dd3fc;
+  --color-warning: #fbbf24;
+  --color-error: #b91c1c;
+}

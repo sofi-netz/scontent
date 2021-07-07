@@ -1,0 +1,14 @@
+<mat-card class="h-full w-full flex flex-col">
+  <div class="flex justify-start gap-4 mb-3">
+    <app-status-icon [status]="requirement.status"></app-status-icon>
+    <mat-card-title class="pt-1">{{requirement.title}}</mat-card-title>
+  </div>
+
+  <mat-card-content>
+    {{requirement.description}}
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button *ngIf="isEditable" mat-stroked-button routerLink="requirement/edit/{{requirement.id}}" i18n>Edit</button>
+  </mat-card-actions>
+</mat-card>
